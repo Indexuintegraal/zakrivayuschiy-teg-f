@@ -48,6 +48,8 @@
   line-height: 65px;
   margin-block-end: 20px;
   text-transform: uppercase;
+}
+.logo-title:focus{
   outline:none;
 }
 .logo-subtitle {
@@ -147,9 +149,9 @@
   line-height: 21.78px;
   padding-inline-start: 11px;
   padding-block-start: 3px;
-  padding-block-end: 3px;
-  font-size: 18.3px;
-  min-height: 31px;
+  padding-block-end: 6px;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--title-weight);
 }
 .image-container {
   position: relative;
