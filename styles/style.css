@@ -19,6 +19,7 @@
   min-block-size: 100dvb;
   font-family: var(--font-main);
   background-color: var(--background-color);
+  background-attachment: fixed;
   color: var(--accent-color);
   background-image: var(--background-image);
   background-size: cover;
@@ -32,7 +33,7 @@
   display: flex;
   flex-direction: column;
   width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  height: 367px;
+  padding-block-start: 136px;
   border: 2px solid var(--accent-color);
   align-items: center;
   justify-content: flex-end;
@@ -45,6 +46,7 @@
   line-height: 65px;
   margin-block-end: 20px;
   text-transform: uppercase;
+  outline:none;
 }
 .logo-subtitle {
   font-size: 23px;
@@ -111,9 +113,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 70px;
+  gap:14px;
   padding-inline-start: 14px;
-  justify-content: space-between;
 }
 
 .content {
@@ -136,6 +137,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .card__title {
   line-height: 21.78px;
   padding-inline-start: 11px;
@@ -175,7 +177,7 @@
   font-weight: var(--font-weight);
   padding-inline-end: 1px;
 }
-.text-indent {
+.card__description-text:nth-child(odd){
   margin-block-end: 27px;
 }
 .card-button {
@@ -229,9 +231,9 @@
 .button {
   position: relative;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 .button:focus {
-  transition: box-shadow 0.3s ease;
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 .button::before {
@@ -332,7 +334,7 @@
 @media screen and (max-width: 670px) {
   .header {
     width: 100%;
-    height: 326px;
+    padding-block-start: 120px;
   }
   .content {
     width: 100%;
